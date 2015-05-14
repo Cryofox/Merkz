@@ -3,3 +3,6 @@ c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\bin\Debug\Merkz_Client
 c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\bin\Debug\Merkz_Client.pdb
 c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\obj\Debug\Merkz_Client.exe
 c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\obj\Debug\Merkz_Client.pdb
+C:\Users\Horia\Documents\GitHub\Merkz\VisStud_Server\Network\Merkz_Client\Merkz_Client\bin\Debug\Merkz_Client.exe.config
+C:\Users\Horia\Documents\GitHub\Merkz\VisStud_Server\Network\Merkz_Client\Merkz_Client\obj\Debug\Merkz_Client.exe
+C:\Users\Horia\Documents\GitHub\Merkz\VisStud_Server\Network\Merkz_Client\Merkz_Client\obj\Debug\Merkz_Client.pdb

@@ -112,17 +112,7 @@ namespace Merkz_Server
             // Create the state object.
             StateObject state = new StateObject();
             state.workSocket = handler;
-/*
-public IAsyncResult BeginReceive
-(
-    byte[] buffer,
-    int offset,
-    int size,
-    SocketFlags socketFlags,
-    AsyncCallback callback,
-    Object state
-) 
-*/
+
             handler.BeginReceive(state.buffer, 0, StateObject.BufferSize, 0, new AsyncCallback(ReadCallback), state);
         }
 

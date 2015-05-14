@@ -4,3 +4,6 @@ c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debu
 c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Merkz_Server.csprojResolveAssemblyReference.cache
 c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Merkz_Server.exe
 c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Merkz_Server.pdb
+C:\Users\Horia\Documents\GitHub\Merkz\VisStud_Server\Network\Merkz_Server\ConsoleApplication1\bin\Debug\Merkz_Server.exe.config
+C:\Users\Horia\Documents\GitHub\Merkz\VisStud_Server\Network\Merkz_Server\ConsoleApplication1\obj\Debug\Merkz_Server.exe
+C:\Users\Horia\Documents\GitHub\Merkz\VisStud_Server\Network\Merkz_Server\ConsoleApplication1\obj\Debug\Merkz_Server.pdb
