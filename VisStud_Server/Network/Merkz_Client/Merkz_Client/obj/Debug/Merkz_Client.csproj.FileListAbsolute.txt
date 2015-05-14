@@ -1,0 +1,5 @@
+c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\bin\Debug\Merkz_Client.exe.config
+c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\bin\Debug\Merkz_Client.exe
+c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\bin\Debug\Merkz_Client.pdb
+c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\obj\Debug\Merkz_Client.exe
+c:\users\horia\Desktop\Projects\Merkz_Client\Merkz_Client\obj\Debug\Merkz_Client.pdb

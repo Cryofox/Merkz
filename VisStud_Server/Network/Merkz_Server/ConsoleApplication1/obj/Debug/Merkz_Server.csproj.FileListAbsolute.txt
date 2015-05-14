@@ -1,0 +1,6 @@
+c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Merkz_Server.exe.config
+c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Merkz_Server.exe
+c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\Merkz_Server.pdb
+c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Merkz_Server.csprojResolveAssemblyReference.cache
+c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Merkz_Server.exe
+c:\users\horia\Desktop\Projects\ConsoleApplication1\ConsoleApplication1\obj\Debug\Merkz_Server.pdb
