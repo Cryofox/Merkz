@@ -7,6 +7,8 @@ class Node
 	public int x,y;
 	public Node parent;
 	public List<Node> children; //List of Potential next nodes
+
+
 	public Node(int x, int y, Node parent)
 	{
 		children= new List<Node>();
@@ -41,22 +43,38 @@ public class Maze
 	//3 = Door
 
 	public int[][] blueprint;
-	int maxW;
-	int maxH;
+	//These are used without CellSize consideration
+	public int maxW;
+	public int maxH;
+	//These are including CellSize 
+	public int realMaxW;
+	public int realMaxH;
+	//Room Controls
+
+	//Dont Change this value
+	int room_Depth =5;
+	//////////////////////////
+
+	//Use this to manipulate room sizes.
+	int cellSize=4;
+
 	//Create a Maze with the Following Parameters
 	public Maze(int width, int height)
 	{
 		Random.seed=45;
 		//Setup Maze Dimensions
-		blueprint = new int[width][];
+		blueprint = new int[width*cellSize][];
 
 		maxW= 	width;
 		maxH=	height;
 
-		for(int i=0;i<width;i++)
+		realMaxH= maxH * cellSize;
+		realMaxW= maxW * cellSize;	
+			
+		for(int i=0;i<width*cellSize;i++)
 		{
-			blueprint[i] = new int[height];
-			for(int j=0;j<height;j++)
+			blueprint[i] = new int[height*cellSize];
+			for(int j=0;j<height*cellSize;j++)
 				blueprint[i][j]=1;
 		}
 
@@ -75,8 +93,7 @@ public class Maze
 
 		//Method 2: DFS
 		DFS();
-		int roomDepth=5;
-		Create_Rooms(5);
+		Create_Rooms(room_Depth);
 	}
 
 	Node root;
@@ -237,7 +254,6 @@ public class Maze
 
 		Cleanup_Points();
 
-
 	}
 
 	void Cleanup_Points()
@@ -262,10 +278,44 @@ public class Maze
 						blueprint[x][y]=1;
 				}
 			}		
-
+		//Zoomin 
+		Rescale_Grid();
 	}
 
+	void Rescale_Grid()
+	{
+		//Easier to start from top Right (End) and work to the beginning.
+		//This way we don't overwrite
+		for(int y=maxH;y>0;y--)		
+			for(int x=maxW;x>0;x--)
+			{
 
+				//Grab the value
+				int val= blueprint[x-1][y-1];
+				//Now Apply this to the location at * CellSize &
+				if(x==0 && y==0)
+					for(int i=0;i<cellSize;i++)
+						for(int j=0;j<cellSize;j++)									
+							blueprint[(cellSize-1)-i][(cellSize-1)-j]= val;
+
+				else if(x==0)
+					for(int i=0;i<cellSize;i++)
+						for(int j=0;j<cellSize;j++)								
+							blueprint[(cellSize-1)-i][y*cellSize-j-1]= val;
+
+				else if(y==0)
+					for(int i=0;i<cellSize;i++)
+						for(int j=0;j<cellSize;j++)								
+							blueprint[x*cellSize-i-1][(cellSize-1)-j]= val;
+
+				else
+					for(int i=0;i<cellSize;i++)
+						for(int j=0;j<cellSize;j++)									
+							blueprint[x*cellSize-i-1][y*cellSize-j-1]= val;
+			}	
+
+
+	}
 
 
 
@@ -298,5 +348,32 @@ public class Maze
 	}
 
 
+	//Modif = Spacing
+	public void DebugDraw_Grid(float modif=1)
+	{
 
+		for(int x=0;x< 	realMaxW;x++)
+		for(int y=0;y<	realMaxH;y++)
+		{
+			Color color;
+			if(blueprint[x][y]==1)
+				color= Color.red;
+			else if(blueprint[x][y]==0)
+				color= Color.blue;
+			else if(blueprint[x][y]==2)
+				color= Color.yellow;
+			else
+				color= Color.green;
+
+				//Draw Top Line
+				Debug.DrawLine(new Vector3((float)(x*modif)-0.25f*modif,0f,(float)(y*modif)+0.25f *modif), new Vector3((float)(x*modif)+0.25f*modif,0f,(float)(y*modif)+0.25f*modif ),color,20);
+				//Draw Bot Line
+				Debug.DrawLine(new Vector3((float)(x*modif)-0.25f*modif,0f,(float)(y*modif)-0.25f *modif), new Vector3((float)(x*modif)+0.25f*modif,0f,(float)(y*modif)-0.25f*modif ),color,20);
+
+				//Draw Left Line
+				Debug.DrawLine(new Vector3((float)(x*modif)-0.25f*modif,0f,(float)(y*modif)-0.25f*modif ), new Vector3((float)(x*modif)-0.25f*modif,0f,(float)(y*modif)+0.25f*modif ),color,20);
+				//Draw Bot Line
+				Debug.DrawLine(new Vector3((float)(x*modif)+0.25f*modif,0f,(float)(y*modif)-0.25f*modif ), new Vector3((float)(x*modif)+0.25f*modif,0f,(float)(y*modif)+0.25f*modif ),color,20);				
+		}
+	}
 }

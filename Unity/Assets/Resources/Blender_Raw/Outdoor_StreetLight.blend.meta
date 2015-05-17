@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: e6ff9c351fa0a0440a6cc9286c857ad1
 ModelImporter:
-  serializedVersion: 15
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: Circle
     100002: Circle_001
@@ -67,6 +67,9 @@ ModelImporter:
     100122: Plane_001
     100124: Plane_002
     100126: Plane_003
+    100128: Circle_006
+    100130: Circle_008
+    100132: Circle_009
     400000: Circle
     400002: Circle_001
     400004: Circle_002
@@ -131,6 +134,9 @@ ModelImporter:
     400122: Plane_001
     400124: Plane_002
     400126: Plane_003
+    400128: Circle_006
+    400130: Circle_008
+    400132: Circle_009
     2300000: Circle
     2300002: Circle_001
     2300004: Circle_002
@@ -194,6 +200,10 @@ ModelImporter:
     2300120: Plane_001
     2300122: Plane_002
     2300124: Plane_003
+    2300126: Circle_006
+    2300128: Circle_008
+    2300130: Circle_009
+    2300132: //RootNode
     3300000: Circle
     3300002: Circle_001
     3300004: Circle_002
@@ -257,6 +267,10 @@ ModelImporter:
     3300120: Plane_001
     3300122: Plane_002
     3300124: Plane_003
+    3300126: Circle_006
+    3300128: Circle_008
+    3300130: Circle_009
+    3300132: //RootNode
     4300000: Circle_007
     4300002: Circle_005
     4300004: Circle_004
@@ -320,6 +334,9 @@ ModelImporter:
     4300120: Model001_24_Outersuitupperd_1_0_0_0_0_0
     4300122: Plane
     4300124: Plane_001
+    4300126: Circle_009
+    4300128: Circle_008
+    4300130: Circle_006
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -330,6 +347,7 @@ ModelImporter:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     optimizeGameObjects: 0
+    motionNodeName: 
     animationCompression: 1
     animationRotationError: .5
     animationPositionError: .5
@@ -348,11 +366,13 @@ ModelImporter:
     generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
+    keepQuads: 0
     weldVertices: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
+    useFileScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     splitTangentsAcrossUV: 1
@@ -373,4 +393,7 @@ ModelImporter:
     rootMotionBoneName: 
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
+  additionalBone: 0
   userData: 
+  assetBundleName: 
+  assetBundleVariant: 
